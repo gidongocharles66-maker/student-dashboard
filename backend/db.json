@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "$2b$10$7x4kt7XYWwNV1hfGs/R2EuaTz1r4kSEZRX7EQfv6au4zKFL6d9eYW",
+      "role": "admin"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "studentId": "S1001",
+      "course": "Computer Science",
+      "gpa": 3.8,
+      "status": "active",
+      "personal": {
+        "email": "alice@example.com",
+        "phone": "555-0101",
+        "address": "123 Maple St"
+      },
+      "courses": [
+        { "code": "CS101", "title": "Intro CS", "grade": 3.7 },
+        { "code": "CS201", "title": "Data Structures", "grade": 3.9 }
+      ],
+      "gpaTrend": [3.4, 3.6, 3.7, 3.8]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "studentId": "S1002",
+      "course": "Mathematics",
+      "gpa": 2.1,
+      "status": "at-risk",
+      "personal": {
+        "email": "bob@example.com",
+        "phone": "555-0102",
+        "address": "456 Oak Ave"
+      },
+      "courses": [
+        { "code": "MA101", "title": "Calculus I", "grade": 2.0 },
+        { "code": "MA201", "title": "Linear Algebra", "grade": 2.2 }
+      ],
+      "gpaTrend": [2.5, 2.3, 2.2, 2.1]
+    }
+  ]
+}
