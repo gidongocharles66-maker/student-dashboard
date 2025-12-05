@@ -2,128 +2,102 @@
 Name: GIDONGO CHARLES
 Reg:25/MSI/BU/G/1001
 Cours unit: web development
-1.	Reports
-2.	Description of the project:
-3.	The project starts with the overview of the project, the structure of the and screen shots.
-4.	 Project structure 
+
+
+
+Student Dashboard
+A web-based dashboard designed for schools to manage and track student performance, assignments, and attendance.
+Built with Node.js, React, and Tailwind CSS, this system provides both student and admin interfaces for efficient academic monitoring.
+
+Features
+ Student Features
+•	Secure student login system
+•	View performance reports
+•	Access assignments
+•	Track attendance records
+•	Clean and responsive user interface
+ Admin Features
+•	Admin dashboard for full management
+•	Add / Update / Delete student data
+•	Manage marks and assignments
+•	Track and update attendance
+•	Generate student reports
+•	Dashboard analytics & insights
+
+ Tech Stack
+Layer	Technology
+Frontend	React, Tailwind CSS
+Backend	Node.js
+Database	MySQL / MongoDB (depending on your setup)
+Auth	JWT / Session-based auth
+Hosting	GitHub Pages, Vercel, Render, or custom server
+
+ Folder Structure (Example)
 student-dashboard/
-├─ backend/
-│  ├─ db.json
-│  ├─ package.json
-│  └─ README.md
-├─ frontend/
-│  ├─ index.html
-│  ├─ package.json
-│  ├─ postcss.config.js
-│  ├─ tailwind.config.js
-│  ├─ src/
-│  │  ├─ main.jsx
-│  │  ├─ App.jsx
-│  │  ├─ index.css
-│  │  ├─ pages/
-│  │  │  ├─ Login.jsx
-│  │  │  ├─ Dashboard.jsx
-│  │  │  ├─ Students.jsx
-│  │  │  ├─ StudentDetail.jsx
-│  │  │  └─ Reports.jsx
-│  │  ├─ components/
-│  │  │  ├─ Navbar.jsx
-│  │  │  ├─ StudentTable.jsx
-│  │  │  ├─ StudentFormModal.jsx
-│  │  │  └─ ThemeToggle.jsx
-│  │  ├─ context/
-│  │  │  └─ AuthContext.jsx
-│  │  └─ services/
-│  │     └─ api.js
-└─ README.md
+│
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   ├── styles/
+│   │   └── App.jsx
+│   ├── public/
+│   └── package.json
+│
+├── README.md
+└── .gitignore
 
+ Installation & Setup
+ 1. Clone the repository
+git clone https://github.com/your-username/student-dashboard.git
+cd student-dashboard
+ 2. Install backend dependencies
+cd backend
+npm install
+ 3. Install frontend dependencies
+cd ../frontend
+npm install
+4. Configure environment variables
+Create a .env file inside the backend folder:
+PORT=5000
+DB_URL=your_database_url
+JWT_SECRET=your_secret_key
+ 5. Start the development servers
+Backend:
+cd backend
+npm start
+Frontend:
+cd frontend
+npm run dev
 
- Overview
-During development, the backend was powered by JSON-Server, which automatically displays a default homepage at http://localhost:8000. This page shows endpoint lists such as:
-•	/users
-•	/students
-Although this behavior is normal, it was not desired for our project interface.
-2. Problem Identified
-JSON-Server automatically serves a homepage interface whenever it does not find a public/index.html file.
-This caused the browser to display the default JSON-Server landing page instead of a blank or customized screen.
-Example of unwanted output:
-“JSON Server  /users – 1 item /students – 2 items”
-3. Implemented Solution
-To override JSON-Server’s automatic homepage, we created an empty public/index.html file inside the frontend project.
-Steps Taken
-1.	Created a new folder named public inside the frontend directory.
-2.	Inside the public folder, added an empty file named:
-3.	index.html
-4.	JSON-Server now detects the custom folder and stops serving its default UI page.
+ Screenshots (Add later)
+You can upload images like:
+/screenshots/login.png
+/screenshots/admin-dashboard.png
+/screenshots/student-dashboard.png
+Then reference them:
+![Student Dashboard](screenshots/dashboard.png)
 
-4. Outcome
-•	The unwanted JSON-Server homepage no longer appears.
-•	Backend API routes continue functioning normally (/users, /students, etc.).
-•	The frontend application now controls what is displayed at the root level.
-•	This improvement ensures a cleaner environment and avoids confusion during development.
+Contribution Guidelines
+1.	Fork the repository
+2.	Create a new branch: git checkout -b feature-name
+3.	Commit changes: git commit -m "Added new feature"
+4.	Push the branch: git push origin feature-name
+5.	Open a Pull Request
 
-5. Conclusion
-The issue was caused by JSON-Server’s default behavior.
-Adding an empty public/index.html resolved the problem fully without affecting backend routes or frontend functionality.
-If needed, this setup can also support custom UI pages in the future.
+License
+This project is licensed under the MIT License.
+
+ Author
+Charles Gidongo
+GitHub: https://github.com/gidongocharles66-maker
 .
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
- 
-
-
- 
- 
- 
- 
- 
- 
-
-
-
-
-
-. Overview
-During development, the backend was powered by JSON-Server, which automatically displays a default homepage at http://localhost:8000. This page shows endpoint lists such as:
-•	/users
-•	/students
-Although this behavior is normal, it was not desired for our project interface.
-________________________________________
-2. Problem Identified
-JSON-Server automatically serves a homepage interface whenever it does not find a public/index.html file.
-This caused the browser to display the default JSON-Server landing page instead of a blank or customized screen.
-Example of unwanted output:
-“JSON Server/users – 1 item /students – 2 items”
-________________________________________
-3. Implemented Solution
-To override JSON-Server’s automatic homepage, we created an empty public/index.html file inside the frontend project.
-Steps Taken
-1.	Created a new folder named public inside the frontend directory.
-2.	Inside the public folder, added an empty file named:
-3.	index.html
-4.	JSON-Server now detects the custom folder and stops serving its default UI page.
-________________________________________
-4. Outcome
-•	The unwanted JSON-Server homepage no longer appears.
-•	Backend API routes continue functioning normally (/users, /students, etc.).
-•	The frontend application now controls what is displayed at the root level.
-•	This improvement ensures a cleaner environment and avoids confusion during development.
-________________________________________
-5. Conclusion
-The issue was caused by JSON-Server’s default behavior.
-Adding an empty public/index.html resolved the problem fully without affecting backend routes or frontend functionality.
-If needed, this setup can also support custom UI pages in the future.
-________________________________________
-If you want, I can also prepare this report formatted as a PDF, PowerPoint, or DOCX for submission.
 
